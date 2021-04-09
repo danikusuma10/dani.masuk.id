@@ -20,7 +20,6 @@
 
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/'); ?>css/adminlte.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/style.css">
 
 </head>
 

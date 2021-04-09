@@ -10,7 +10,7 @@
             <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '
           </div>') ?>
             <?= $this->session->flashdata('message') ?>
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addNewAdmin">Tambah Admin</a>
+            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addNewAdmin">Tambah tahun ajaran</a>
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -114,7 +114,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addNewAdminLabel">Tambah Admin Baru</h5>
+                <h5 class="modal-title" id="addNewAdminLabel">Tambah Tahun Ajaran</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
