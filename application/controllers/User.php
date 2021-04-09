@@ -14,11 +14,11 @@ class User extends CI_Controller
         $data['title'] = 'My Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
-        $this->load->view('user/index', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('Templates/Header', $data);
+        $this->load->view('Templates/Sidebar', $data);
+        $this->load->view('Templates/Topbar', $data);
+        $this->load->view('User/index', $data);
+        $this->load->view('Templates/Footer', $data);
     }
 
     public function edit()
@@ -30,11 +30,11 @@ class User extends CI_Controller
 
         if ($this->form_validation->run() == false) {
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar', $data);
-            $this->load->view('templates/topbar', $data);
-            $this->load->view('user/edit', $data);
-            $this->load->view('templates/footer');
+            $this->load->view('Templates/Header', $data);
+            $this->load->view('Templates/Sidebar', $data);
+            $this->load->view('Templates/Topbar', $data);
+            $this->load->view('User/edit', $data);
+            $this->load->view('Templates/Footer');
         } else {
             $name = $this->input->post('name');
             $email = $this->input->post('email');
@@ -72,7 +72,7 @@ class User extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Selamat! profile berhasil diubah!</div>
             ');
-            redirect('user');
+            redirect('User');
         }
     }
 
@@ -86,11 +86,11 @@ class User extends CI_Controller
         $this->form_validation->set_rules('new_password2', 'Confirm New Password', 'required|trim|min_length[6]|matches[new_password1]');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar', $data);
-            $this->load->view('templates/topbar', $data);
-            $this->load->view('user/changepassword', $data);
-            $this->load->view('templates/footer', $data);
+            $this->load->view('Templates/Header', $data);
+            $this->load->view('Templates/Sidebar', $data);
+            $this->load->view('Templates/Topbar', $data);
+            $this->load->view('User/Changepassword', $data);
+            $this->load->view('Templates/Footer', $data);
         } else {
             $current_password = $this->input->post('current_password');
             $new_password     = $this->input->post('new_password1');
@@ -98,24 +98,24 @@ class User extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Password lama salah!</div>
             ');
-                redirect('user/changepassword');
+                redirect('User/Changepassword');
             } else {
                 if ($current_password == $new_password) {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Password baru tidak boleh sama dengan password lama!</div>
             ');
-                    redirect('user/changepassword');
+                    redirect('User/Changepassword');
                 } else {
                     $password_hash = password_hash($new_password, PASSWORD_DEFAULT);
 
                     $this->db->set('password', $password_hash);
                     $this->db->where('email', $this->session->userdata('email'));
-                    $this->db->update('user');
+                    $this->db->update('User');
 
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Password berhasil di ganti!</div>
             ');
-                    redirect('user/changepassword');
+                    redirect('User/Changepassword');
                 }
             }
         }
