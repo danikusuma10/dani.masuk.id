@@ -1,0 +1,2 @@
+[08-Apr-2021 13:27:34 UTC] PHP Fatal error:  Call to undefined function random_bytes() in /home/danimasu/public_html/application/controllers/Auth.php on line 118
+[08-Apr-2021 13:30:39 UTC] PHP Fatal error:  Call to undefined function random_bytes() in /home/danimasu/public_html/application/controllers/Auth.php on line 118
