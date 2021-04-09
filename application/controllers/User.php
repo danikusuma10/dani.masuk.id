@@ -33,7 +33,7 @@ class User extends CI_Controller
             $this->load->view('Templates/Header', $data);
             $this->load->view('Templates/Sidebar', $data);
             $this->load->view('Templates/Topbar', $data);
-            $this->load->view('User/edit', $data);
+            $this->load->view('User/Edit', $data);
             $this->load->view('Templates/Footer');
         } else {
             $name = $this->input->post('name');
