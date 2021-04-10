@@ -20,9 +20,9 @@ class Pembayaran extends CI_Controller
 
     public function index()
     {
-        $this->load->view('templates/header');
-        $this->load->view('pembayaran/bayar');
-        $this->load->view('templates/footer');
+        $this->load->view('Templates/Header');
+        $this->load->view('Pembayaran/Bayar');
+        $this->load->view('Templates/Footer');
     }
 
     public function requesttransaksi()
@@ -33,17 +33,17 @@ class Pembayaran extends CI_Controller
 
         $data['tranksaksi'] = $this->Pembayaran_model->getAllTranksaksi();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
-        $this->load->view('pembayaran/data_tranksaksi', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('Templates/Header', $data);
+        $this->load->view('templates/Sidebar', $data);
+        $this->load->view('templates/Topbar', $data);
+        $this->load->view('Pembayaran/Data_tranksaksi', $data);
+        $this->load->view('Templates/Footer');
     }
 
     public function cektransaksi()
     {
        
-        $this->load->view('pembayaran/transaction');
+        $this->load->view('Pembayaran/Transaction');
     }
     public function status($order_id)
 	{
