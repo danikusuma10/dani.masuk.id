@@ -75,14 +75,23 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '103.134.152.15',
+	'username' => 'danimasu_payment',
+	'password' => 'beliveme16',
 	'database' => 'danimasu_payment',
+
+	//'hostname' => 'localhost',
+	//'username' => 'root',
+	//'password' => '',
+	//'database' => 'danimasu_payment',
+
+
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => (ENVIRONMENT !== 'development'),
+	//'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
