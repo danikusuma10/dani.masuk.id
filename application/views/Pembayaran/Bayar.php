@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/adminlte.min.css">
 
 <!-- Load file CSS Bootstrap offline -->
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.min.css">
-<script src="<?php echo base_url() ?>/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap/css/bootstrap.min.css">
+<script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Load file Midtrans online -->
 <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-XntQN7g-lIfRoI0F"></script>
@@ -53,7 +53,7 @@
 
         <!--Selesai pembayaran redirect kek snap finish-->
         <div class="container mt-5">
-            <form id="payment-form" method="post" action="<?= site_url() ?>snap/finish">
+            <form id="payment-form" method="post" action="<?= site_url() ?>Snap/finish">
                 <input type="hidden" name="result_type" id="result-type" value="">
         </div>
         <input type="hidden" name="result_data" id="result-data" value="">
