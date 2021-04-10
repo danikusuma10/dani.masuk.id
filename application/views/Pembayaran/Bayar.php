@@ -157,7 +157,7 @@
 
         $.ajax({
             type: 'POST',
-            url: '<?= site_url() ?>/snap/token',
+            url: '<?= site_url() ?>/Snap/token',
 
             data: {
 
