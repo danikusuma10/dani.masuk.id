@@ -25,7 +25,7 @@ class th_aktif extends CI_Controller
         $this->load->view('Templates/Sidebar', $data);
         $this->load->view('Templates/Topbar', $data);
         $this->load->view('Thaktif/Index', $data1);
-        $this->load->view('Templates/footer');
+        $this->load->view('Templates/Footer');
     }
 
     function tambah()
@@ -38,7 +38,7 @@ class th_aktif extends CI_Controller
         $this->load->view('Templates/Sidebar', $data);
         $this->load->view('Templates/Topbar', $data);
         $this->load->view('Thaktif/Tambah_Thaktif');
-        $this->load->view('Templates/footer');
+        $this->load->view('Templates/Footer');
     }
 
     function tambah_aksi()

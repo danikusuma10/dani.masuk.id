@@ -49,6 +49,15 @@ class Admin_model extends CI_Model
             return 0;
         }
     }
+    function jumlahrequest()
+    {
+        $query = $this->db->get('tbl_requesttransaksi');
+        if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        } else {
+            return 0;
+        }
+    }
     public function delete_by_id($id)
     {
         $this->db->where('id', $id);
