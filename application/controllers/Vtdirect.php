@@ -22,7 +22,7 @@ class Vtdirect extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $params = array('server_key' => 'your_server_key', 'production' => false);
+        $params = array('server_key' => 'SB-Mid-server-agj15d5qnNn06ZuKmkPA785C', 'production' => false);
 		$this->load->library('veritrans');
 		$this->veritrans->config($params);
 		$this->load->helper('url');
@@ -31,7 +31,7 @@ class Vtdirect extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('checkout_with_3ds');
+		$this->load->view('Pembayaran/Checkout_with_3ds');
 	}
 
 	public function vtdirect_cc_charge()

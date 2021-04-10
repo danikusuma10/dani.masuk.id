@@ -31,7 +31,7 @@ class Vtweb extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('checkout_vtweb');
+		$this->load->view('Pembayaran/Checkout_vtweb');
 	}
 
 	public function vtweb_checkout()
