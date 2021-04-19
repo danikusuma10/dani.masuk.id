@@ -97,8 +97,6 @@ class Snap extends CI_Controller
 	public function finish()
 	{
 		
-
-		
 		$result = json_decode($this->input->post('result_data'));
 		$nama= $this->input->post('nama');
 		$kelas=$this->input->post('kelas');
@@ -146,7 +144,7 @@ class Snap extends CI_Controller
 		];
 
 	
-		$return = $this->snapmodel->insert($data);
+		$return = $this->Snapmodel->insert($data);
 		if ($return) {
 			echo "Success,Lets Make a Pay";
 		} else {

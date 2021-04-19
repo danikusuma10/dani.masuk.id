@@ -85,7 +85,7 @@
                             <th>Tahun Ajaran</th>
                             <th>Tanggal Bayar</th>
                             <th>Besar SPP</th>
-                            <th>Penerima</th>
+                            <th>Petugas</th>
                             <th>AKSI</th>
                         </tr>
                     </thead>

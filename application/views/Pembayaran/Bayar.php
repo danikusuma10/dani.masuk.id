@@ -21,7 +21,8 @@
 <script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Load file Midtrans online -->
-<script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-XntQN7g-lIfRoI0F"></script>
+<script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" 
+data-client-key="SB-Mid-client-XntQN7g-lIfRoI0F"></script>
 <!-- Google Font: Source Sans Pro -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 <!-- Font Awesome -->
